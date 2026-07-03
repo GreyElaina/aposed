@@ -12,6 +12,19 @@
   margin: 1rem auto 1.5rem;
 }
 
+main h1.chapter-title-with-subtitle {
+  margin-block-end: 0.25rem;
+}
+
+main h1.chapter-title-with-subtitle + p {
+  margin-block-start: 0;
+  margin-block-end: 1.7rem;
+  color: var(--fg);
+  opacity: 0.72;
+  font-size: 1.08em;
+  line-height: 1.45;
+}
+
 /* APOSD red flags use mdBook/GFM warning admonitions.
    Keep the semantic warning container, but present it as a calm book sidebar. */
 .blockquote-tag-warning > .blockquote-tag-title {
