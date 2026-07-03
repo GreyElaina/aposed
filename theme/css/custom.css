@@ -1,0 +1,72 @@
+:root {
+  --aposd-figure-max-inline-size: 720px;
+  --aposd-figure-block-gap: 1.55rem;
+  --aposd-figure-caption-opacity: 0.72;
+  --aposd-figure-bg: #fff;
+}
+
+.book-cover {
+  display: block;
+  inline-size: min(280px, 55%);
+  block-size: auto;
+  margin: 1rem auto 1.5rem;
+}
+
+/* APOSD red flags use mdBook/GFM warning admonitions.
+   Keep the semantic warning container, but present it as a calm book sidebar. */
+.blockquote-tag-warning > .blockquote-tag-title {
+  display: none;
+}
+
+.blockquote-tag-warning > p:has(> strong:only-child) {
+  margin-block-start: 0;
+  margin-block-end: 0.55rem;
+  line-height: 1.35;
+}
+
+.blockquote-tag-warning > p:has(> strong:only-child) > strong {
+  display: inline-block;
+  padding: 0.12rem 0.42rem;
+  border-radius: 0.32rem;
+  background: color-mix(in srgb, var(--blockquote-warning-color) 18%, transparent);
+  color: inherit;
+  font-size: 0.95em;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+
+.blockquote-tag-warning > p:has(> strong:only-child) + p {
+  margin-block-start: 0;
+}
+
+/* Standalone Markdown images followed by an italic caption are presented as figures. */
+main p:has(> img:only-child) {
+  text-align: center;
+  margin-block: var(--aposd-figure-block-gap) 0.55rem;
+}
+
+main p:has(> img:only-child) > img {
+  display: block;
+  max-inline-size: min(100%, var(--aposd-figure-max-inline-size));
+  block-size: auto;
+  margin-inline: auto;
+  background: var(--aposd-figure-bg);
+  border: 1px solid color-mix(in srgb, var(--fg) 14%, transparent);
+  border-radius: 0.12rem;
+}
+
+main p:has(> img:only-child) + p:has(> em:only-child) {
+  max-inline-size: min(100%, var(--aposd-figure-max-inline-size));
+  margin: 0 auto var(--aposd-figure-block-gap);
+  text-align: left;
+  color: var(--fg);
+  opacity: var(--aposd-figure-caption-opacity);
+  font-size: 0.86em;
+  line-height: 1.62;
+}
+
+main p:has(> img:only-child) + p:has(> em:only-child) > em {
+  font-style: normal;
+}

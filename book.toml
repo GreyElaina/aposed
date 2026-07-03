@@ -1,0 +1,25 @@
+[book]
+title = "软件设计的哲学（第二版）"
+authors = ["John Ousterhout", "yingang/aposd2e-zh contributors"]
+description = "《A Philosophy of Software Design, 2nd Edition》的中文翻译 mdBook 版本"
+language = "zh-CN"
+src = "src"
+
+[output.html]
+default-theme = "light"
+preferred-dark-theme = "navy"
+smart-punctuation = true
+mathjax-support = true
+no-section-label = false
+admonitions = true
+additional-css = ["theme/css/custom.css"]
+
+[output.html.search]
+enable = true
+limit-results = 30
+use-boolean-and = true
+boost-title = 2
+boost-hierarchy = 1
+boost-paragraph = 1
+expand = true
+heading-split-level = 3
