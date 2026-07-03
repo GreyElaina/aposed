@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /aposed/print.html
+Disallow: /aposed/toc.html
+
+Sitemap: https://greyelaina.github.io/aposed/sitemap.xml

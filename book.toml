@@ -12,6 +12,7 @@ smart-punctuation = true
 mathjax-support = true
 no-section-label = false
 admonitions = true
+site-url = "/aposed/"
 git-repository-url = "https://github.com/GreyElaina/aposed"
 git-repository-icon = "fab-github"
 additional-css = ["theme/css/custom.css"]
